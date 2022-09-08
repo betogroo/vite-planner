@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Primeiro item do planner",
+            "details": "Loren ipsum",
+            "complete": false
+        },
+        {
+            "id": 2,
+            "title": "Segundo item do planner",
+            "details": "Loren ipsum",
+            "complete": true
+        }
+    ]
+}
