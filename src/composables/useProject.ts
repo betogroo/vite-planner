@@ -7,19 +7,30 @@ interface Project {
   details: string
   complete: boolean
 }
+interface ProjectError {
+  error: boolean
+  message: string
+  code: string
+}
+
 const useProject = () => {
   const projects = ref<Project[]>([])
+  const error = ref<ProjectError | null>(null)
   const fetchProject = async () => {
     try {
       const data = await axios.get(`http://localhost:3000/projects`)
       projects.value = data.data
-      console.log(projects.value)
-    } catch (err) {
+    } catch (err: any) {
+      error.value = {
+        error: true,
+        code: err.code,
+        message: err.message
+      }
       console.log(err)
     }
   }
 
-  return { projects, fetchProject }
+  return { projects, error, fetchProject }
 }
 
 export default useProject
