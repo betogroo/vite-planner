@@ -11,12 +11,22 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/about',
-    name: 'AboutView',
-    component: () => import('@/views/AboutView.vue'),
+    path: '/add',
+    name: 'AddProject',
+    component: () => import('@/views/AddProject.vue'),
     meta: {
-      title: 'Sobre',
-      requiresAuth: false
+      requiresAuth: false,
+      title: 'Nova Tarefa'
+    }
+  },
+  {
+    path: '/projects/:id',
+    name: 'EditProject',
+    component: () => import('@/views/EditProject.vue'),
+    props: true,
+    meta: {
+      requiresAuth: false,
+      title: 'Editar Tarefa'
     }
   },
   {
