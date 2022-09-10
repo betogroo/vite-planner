@@ -1,17 +1,6 @@
 import { ref } from 'vue'
 import axios from 'axios'
-
-interface Project {
-  id: string
-  title: string
-  details: string
-  complete: boolean
-}
-interface ProjectError {
-  error: boolean
-  message: string
-  code: string
-}
+import { Project, ProjectError } from '@/types/project'
 
 const useProject = () => {
   const projects = ref<Project[]>([])
