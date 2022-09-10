@@ -4,13 +4,22 @@
             "id": 1,
             "title": "Primeiro item do planner",
             "details": "Loren ipsum",
-            "complete": false
+            "complete": false,
+            "disabled": false
         },
         {
             "id": 2,
             "title": "Segundo item do planner",
             "details": "Loren ipsum",
-            "complete": true
+            "complete": true,
+            "disabled": false
+        },
+        {
+            "id": 3,
+            "title": "Terceiro item do planner",
+            "details": "Loren ipsum uushd ushdu shdush dsuhd ushd ushdush duh udhsu dhsu hdsu",
+            "complete": false,
+            "disabled": false
         }
     ]
 }
