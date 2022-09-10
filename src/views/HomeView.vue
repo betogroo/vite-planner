@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProjectList from '../components/ProjectList.vue'
+</script>
 
 <template>
-  <div class="text-h1 text-center">Home Page</div>
+  <Suspense>
+    <ProjectList />
+    <template #fallback> Loading... </template>
+  </Suspense>
 </template>
 
 <style scoped></style>
